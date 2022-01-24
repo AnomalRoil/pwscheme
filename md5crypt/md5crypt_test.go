@@ -76,7 +76,7 @@ func TestGenerateManyPasses(t *testing.T) {
 
 	errors := 0
 
-	for i := 0; i < 5000; i++ {
+	for i := 0; i < 1000; i++ {
 		if hash, err = md5crypt.Generate(pass, 8); err != nil {
 			t.Errorf("Generate password fails: %s", err)
 			return
@@ -89,6 +89,6 @@ func TestGenerateManyPasses(t *testing.T) {
 	}
 
 	if errors != 0 {
-		t.Errorf("%d error(s) occurred when running 5000 passes", errors)
+		t.Errorf("%d error(s) occurred when running 1000 passes", errors)
 	}
 }
